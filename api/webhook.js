@@ -34,7 +34,7 @@ const payload = JSON.stringify({
     {
       title: '<:scmegaphone:1298849163957768272> information',
       description: statusMessage,
-      color: 0x00FF00 // Warna hijau
+      color: 0xFF0000 // Warna merah
     }
   ]
 });
