@@ -27,9 +27,9 @@ module.exports = async (req, res) => {
     // URL webhook Discord (pastikan ini diatur di environment variables Vercel)
     const discordWebhookUrl = process.env.DISCORD_WEBHOOK_URL;
 
-    // Mengambil waktu sekarang dalam format yang diinginkan
+    // Mengambil waktu sekarang dalam format yang diinginkan (tanpa detik)
     const now = new Date();
-    const options = { timeZone: 'Asia/Jakarta', hour: '2-digit', minute: '2-digit', second: '2-digit', year: 'numeric', month: 'long', day: 'numeric' };
+    const options = { timeZone: 'Asia/Jakarta', hour: '2-digit', minute: '2-digit', year: 'numeric', month: 'long', day: 'numeric' };
     const formattedDate = now.toLocaleString('id-ID', options);
 
     // Payload untuk dikirim ke Discord
@@ -38,13 +38,13 @@ module.exports = async (req, res) => {
       embeds: [
         {
           title: '<:scmegaphone:1298849163957768272> **information PNB Scripting CreativePS**',
-          description: `${statusMessage}\n**Tanggal dan Waktu:** ${formattedDate} (WIB)`,
+          description: statusMessage, // Tanggal dan waktu dihapus dari deskripsi
           color: 0xFF0000, // Warna merah
           image: {
             url: 'https://wb-marsh-brandeds-projects.vercel.app/standard_22.gif ' // Ganti dengan URL gambar atau GIF yang diinginkan
           },
           footer: {
-            text: `© 2024 Scripting CreativePS | ${formattedDate} (WIB)` // Tambahkan copyright dan tanggal di sampingnya
+            text: `© 2024 Scripting CreativePS | ${formattedDate} (WIB)` // Tanggal dan waktu di bawah
           }
         }
       ]
