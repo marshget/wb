@@ -32,7 +32,7 @@ module.exports = async (req, res) => {
       content: '',
       embeds: [
         {
-          title: ':scmegaphone: tes webhook',
+          title: '<:scmegaphone:1298849163957768272> tes webhook',
           description: statusMessage,
           color: 0x00FF00 // Warna hijau
         }
