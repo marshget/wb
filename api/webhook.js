@@ -44,7 +44,7 @@ module.exports = async (req, res) => {
             url: 'https://wb-marsh-brandeds-projects.vercel.app/standard_22.gif ' // Ganti dengan URL gambar atau GIF yang diinginkan
           },
           footer: {
-            text: '© 2024 Scripting CreativePS' // Tambahkan copyright di footer
+            text: `© 2024 Scripting CreativePS | ${formattedDate} (WIB)` // Tambahkan copyright dan tanggal di sampingnya
           }
         }
       ]
