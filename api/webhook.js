@@ -41,7 +41,7 @@ module.exports = async (req, res) => {
           description: `${statusMessage}\n\n**Tanggal dan Waktu:** ${formattedDate} (WIB)`,
           color: 0xFF0000, // Warna merah
           image: {
-            url: 'https://raw.githubusercontent.com/marshget/wb/tree/main/api/standard_21.gif' // Ganti dengan URL gambar atau GIF yang diinginkan
+            url: 'https://wb-marsh-brandeds-projects.vercel.app/api/standard_21.gif ' // Ganti dengan URL gambar atau GIF yang diinginkan
           },
           footer: {
             text: '© 2024 Scripting CreativePS' // Tambahkan copyright di footer
