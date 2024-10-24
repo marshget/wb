@@ -43,6 +43,9 @@ module.exports = async (req, res) => {
           image: {
             url: 'https://wb-marsh-brandeds-projects.vercel.app/standard_22.gif ' // Ganti dengan URL gambar atau GIF yang diinginkan
           },
+          thumbnail: {
+            url: 'https://wb-marsh-brandeds-projects.vercel.app/standard_16.gif' // URL logo yang ditampilkan di pojok kanan atas
+          },
           footer: {
             text: `© 2024 Scripting CreativePS | ${formattedDate} (WIB)` // Tanggal dan waktu di bawah
           }
