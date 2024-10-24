@@ -28,16 +28,16 @@ module.exports = async (req, res) => {
     const discordWebhookUrl = process.env.DISCORD_WEBHOOK_URL;
 
     // Payload untuk dikirim ke Discord
-    const payload = JSON.stringify({
-      content: '',
-      embeds: [
-        {
-          title: '<:scmegaphone:1298849163957768272> tes webhook',
-          description: statusMessage,
-          color: 0x00FF00 // Warna hijau
-        }
-      ]
-    });
+const payload = JSON.stringify({
+  content: '',
+  embeds: [
+    {
+      title: '<:scmegaphone:1298849163957768272> PTHT BOTHAX PREMIUM By MasD',
+      description: statusMessage,
+      color: 0x00FF00 // Warna hijau
+    }
+  ]
+});
 
     const options = {
       method: 'POST',
