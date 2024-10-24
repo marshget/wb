@@ -32,7 +32,7 @@ const payload = JSON.stringify({
   content: '',
   embeds: [
     {
-      title: '<:scmegaphone:1298849163957768272> information',
+      title: '<:scmegaphone:1298849163957768272> **information PNB Scripting CreativePS**',
       description: statusMessage,
       color: 0xFF0000 // Warna merah
     }
