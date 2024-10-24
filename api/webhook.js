@@ -41,7 +41,8 @@ module.exports = async (req, res) => {
           description: `${statusMessage}\n\n**Tanggal dan Waktu:** ${formattedDate} (WIB)`,
           color: 0xFF0000, // Warna merah
           image: {
-            url: 'https://github.com/marshget/wb/blob/fd97f43b5949e89a6e9faf0534fd4a7f77632df0/api/standard_21.gif' // Ganti dengan URL gambar atau GIF yang diinginkan
+            url: 'https://raw.githubusercontent.com/marshget/wb/tree/main/api/standard_21.gif
+' // Ganti dengan URL gambar atau GIF yang diinginkan
           },
           footer: {
             text: '© 2024 Scripting CreativePS' // Tambahkan copyright di footer
