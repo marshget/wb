@@ -32,7 +32,7 @@ module.exports = async (req, res) => {
       content: '',
       embeds: [
         {
-          title: 'PTHT BOTHAX PREMIUM By MasD',
+          title: ':scmegaphone: tes webhook',
           description: statusMessage,
           color: 0x00FF00 // Warna hijau
         }
