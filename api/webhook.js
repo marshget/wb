@@ -32,7 +32,7 @@ const payload = JSON.stringify({
   content: '',
   embeds: [
     {
-      title: '<:scmegaphone:1298849163957768272> PTHT BOTHAX PREMIUM By MasD',
+      title: '<:scmegaphone:1298849163957768272> information',
       description: statusMessage,
       color: 0x00FF00 // Warna hijau
     }
