@@ -27,19 +27,30 @@ module.exports = async (req, res) => {
     // URL webhook Discord (pastikan ini diatur di environment variables Vercel)
     const discordWebhookUrl = process.env.DISCORD_WEBHOOK_URL;
 
-    // Payload untuk dikirim ke Discord
-const payload = JSON.stringify({
-  content: '',
-  embeds: [
-    {
-      title: '<:scmegaphone:1298849163957768272> **information PNB Scripting CreativePS**',
-      description: statusMessage,
-      color: 0xFF0000 // Warna merah
-    }
-  ]
-});
+    // Mengambil waktu sekarang dalam format yang diinginkan
+    const now = new Date();
+    const options = { timeZone: 'Asia/Jakarta', hour: '2-digit', minute: '2-digit', second: '2-digit', year: 'numeric', month: 'long', day: 'numeric' };
+    const formattedDate = now.toLocaleString('id-ID', options);
 
-    const options = {
+    // Payload untuk dikirim ke Discord
+    const payload = JSON.stringify({
+      content: '',
+      embeds: [
+        {
+          title: '<:scmegaphone:1298849163957768272> **information PNB Scripting CreativePS**',
+          description: `${statusMessage}\n\n**Tanggal dan Waktu:** ${formattedDate} (WIB)`,
+          color: 0xFF0000, // Warna merah
+          image: {
+            url: 'URL_GAMBAR_ATAU_GIF' // Ganti dengan URL gambar atau GIF yang diinginkan
+          },
+          footer: {
+            text: '© 2024 Scripting CreativePS' // Tambahkan copyright di footer
+          }
+        }
+      ]
+    });
+
+    const optionsRequest = {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -47,7 +58,7 @@ const payload = JSON.stringify({
       }
     };
 
-    const webhookReq = https.request(discordWebhookUrl, options, (response) => {
+    const webhookReq = https.request(discordWebhookUrl, optionsRequest, (response) => {
       let responseData = '';
       response.on('data', (chunk) => {
         responseData += chunk;
